@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>Comparateur de salaire</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://kit.fontawesome.com/28e1129916.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" media="screen" />
+		<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+		<link href="https://fonts.googleapis.com/css?family=Ibarra+Real+Nova|Oswald&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"> </script>
+	</head>
+	<body>
+		
+		<header>
+		    <h1> Comparateur de salaire </h1>
+		</header>
+		
+		<main>
+		    <blockquote>
+    		  	<cite> "Si seulement il était possible de comparer son salaire avec sa célébrité préférée en quelques clics ... "</cite> 
+    			<p> Victor Hugo, <cite> Twitter en 110 caractères </cite> , 2020  </p>
+    		</blockquote>
+    		
+    		<h2> Sélectionnez une célébrité parmis les catégories proposées, entrez votre salaire annuel et profitez du résultat !</h2>
+    		
+			<p id="alertJS">
+				<p class="removeAlert"></p>
+			</p>
+			
+    	    <div id="celebrity_choice">
+    	    	<nav id="category">
+    	    		<?php for($i=0; $i<count($listCategory); $i++) : ?>
+    	    	 		<button type="button" class="button_category action-button purple" data-id="<?= $listCategory[$i]['cat_id'] ?>"> <?php echo ucfirst($listCategory[$i]['cat_name']); ?> </button> 
+       				<?php endfor; ?> 
+       			</nav>
+       			<form action="php/traitement.php" method="post"> 
+		       		<div id="list_celebrity">
+			       		<div class="showCelebrity"></div>
+			       	</div>
+		       		<input type='number' id="userSalary" name="userSalary" placeholder="Votre salaire annuel" required >
+			       		
+			       	<button type="submit" id="button_choice" class="action-button blue"> Valider ! </button> 
+	       		</form>
+    	    </div> 
+		</main>
+		<footer>
+			<nav>
+				<ul>
+					<li> <a href="#"> En savoir plus</a> </li>
+					<li> <a href="#"> Mentions légales</a> </li>
+				</ul>
+			</nav>
+		</footer>
+		<script type="text/javascript" src="js/main.js"> </script>
+	</body>
+</html>

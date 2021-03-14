@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>Comparateur de salaire</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://kit.fontawesome.com/28e1129916.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/normalize.css" media="screen" />
+		<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+		<link href="https://fonts.googleapis.com/css?family=Ibarra+Real+Nova|Oswald&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="../css/style.css" media="screen" />
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"> </script>
+	</head>
+	<body>
+		<header>
+		    <h1> <a href="../index.php">Comparateur de salaire </a></h1>
+		</header>
+		<main>
+			<section id="traitementJS">
+				<h2 data-celeb="<?= $celebSalarySecond ?>" data-user="<?= $userSalarySecond ?>"> <?= $celebName ?> </h2>
+				<img src="<?= $getCelebPicture ?>" alt="<?= $celebAlt ?>" class="pictureCeleb picTraitementCeleb">
+				
+				<article>
+					<p> <?= $celebName ?> met  <?= $minutesNeededCeleb ?> minutes pour gagner votre salaire annuel ! </p>
+					<aside><p> C'est peu hein ?</p> </aside>
+					<p> Pour vous, perdre votre temps devant une vidéo de chat de deux minutes correspond à perdre <?= $videoUser ?> €, pour <?= $celebName ?> <?= $videoCeleb ?> €</p>
+					<aside><p> On aime tous les vidéos de chats ...</p></aside>
+				</article>
+				
+				<article>
+					<p> <?= $celebName ?> met <?= $calculHourCelebULS ?> heures pour gagner le salaire de votre vie.</p>
+				</article>
+				
+				<article>
+					<p>En se disant que 1 euros = 1 mètre, en un an pourriez faire <?= $userSalaryKm ?>km, soit environ le trajet <?= $runDestination ?>. Notre célébrité 
+					pourra elle faire environ <?= $celebSalaryKm ?> fois le tour de la terre .</p>
+					<aside><p> L'avantage quand on fait le tour c'est qu'on est moins affecté par le décalage horaire. </p></aside>
+				</article>
+				
+				<article>
+					<p> <?= $celebName ?> gagne <?= $celebSalary ?> euros par an </p>
+					<aside><p> Il y a combien de zéros là ? </p></aside>
+				</article>
+
+				<div id="forTimer"><p> Depuis que vous lisez ces lignes, le portefeuille de <?= $celebName ?> s'est enrichie de : <span id="timerCeleb">
+					<span id="showTimerCeleb"></span></span> en <span id="timerSecond"><span id="showTimerSecond"></span></span> </p>
+					<p> Et vous ? 
+						<span id="timerUser">
+							<span id="showTimerUser"></span>
+						</span>
+					En autant de secondes.
+					</p>
+				</div>
+		</section>	
+		</main>
+		<script type="text/javascript" src="../js/traitement.js"> </script>
+	</body>
+</html>
